@@ -37,14 +37,21 @@ end
 #Jugada del rival
 def rival(player)
 
-	while (player>@total)
+#El riesgo que asumirá el rival para intentar superar al jugador en caso de empate
+risk = rand(13..17)
+
+	while (player>@total || @total<risk)
 		@jugada = rand(1..10)
 		@total += @jugada
 
 		jugada = @jugada
-
 		puts "#{jugada}"
-	
+
+       #Si el total del rival supera al del jugador rompe el bucle porque ya ha ganado
+        if @total > player
+          	break
+        end
+		
 	if @total==21
 		break
 		
