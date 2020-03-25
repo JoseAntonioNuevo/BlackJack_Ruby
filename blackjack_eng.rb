@@ -47,7 +47,7 @@ risk = rand(13..17)
 		jugada = @jugada
 		puts "#{jugada}"
 
-       # if the total overpass the player's score, breaks the while because the oponent just won
+       # if the total overpass the player's score, breaks the loop because the oponent just won
         if @total > player
           	break
         end
